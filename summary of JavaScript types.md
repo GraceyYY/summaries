@@ -15,7 +15,7 @@ JavaScript中数据类型分为两类，原始类型（primitive types）和对�
      * `Infinity`和`-Infinity`是Number类型中的特殊值，它们无法参与下次计算。为了避免`Infinity`和`-Infinity`影响运算，可以通过`isFinite()`函数进行判断该值是否是`Infinity/-Infinity`。
      * `NaN`（not a number）也是Number类型中的一个特殊值，用来表示一个本来要返回数值的操作数未返回数值的情况（这样就不会抛出错误了）。它有以下两个特点：
        1. 任何涉及`NaN`的操作，都会返回`NaN`。
-       2. `NaN`与任何数值都不想等，包括它自己。`NaN != NaN; //true`
+       2. `NaN`与任何数值都不相等，包括它自己。`NaN != NaN; //true`
           * 可以通过isNaN()函数去判断某个值是否是NaN，然而这个函数有一个bug，就是当该值不为数值时（例如string），返回值也会是true（因为这个函数检查该值是否不是`NaN`，也不是数字）。因此在判断某个值是否为`NaN`时，建议使用ES6的`Number.isNaN()`或者利用它不等于自己的特点`n != n`。
 
      * 将其他类型的数值转换为Number有三个函数：`Number()`，`parsInt()`,和`parseFloat()`。三个函数的转换规则不同，常用的为`parsInt()`。
@@ -63,4 +63,4 @@ JavaScript中数据类型分为两类，原始类型（primitive types）和对�
   * 对象可以转换为原始值。对象继承了两个方法，`toString()`和`valueOf()`。
 
 * JavaScript可以自由地进行数据类型的转换（遵循相应的转换规则）。
-* 在实际编程的过程中，可以用`typeOf`操作符判断变量的数据类型。
+* 在实际编程的过程中，可以用`typeof`操作符判断变量的数据类型。
